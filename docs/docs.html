@@ -1,20 +1,26 @@
 
-<header class="center px2 py4 xwhite xbg-black">
-  <h1 class="caps mb0">Skull</h1>
-  <div class="h6 caps">v<%= version %></div>
-  <p class="h3">Minimal boilerplate and Basscss theme</p>
+<header class="center px2 py4">
+  <svg viewBox="0 0 32 32"
+    width="3em"
+    height="3em"
+    class="inline-block"
+    fill="currentColor">
+    <path d="
+      M0 6 H32 V24 L28 25 V28 H4 V25 L0 24z
+      M2 8 V22 L6 23 V26 H26 V23 L30 22 V8z
+      M3 17 A4 4 0 0 0 11 17 A4 4 0 0 0 3 17
+      M21 17 A4 4 0 0 0 29 17 A4 4 0 0 0 21 17 
+    "/>
+  </svg>
+  <h1 class="m0">
+    Skull
+    <sup class="h6 caps">v<%= version %></sup>
+  </h1>
+  <p class="h3 mb3">Minimal boilerplate and Basscss theme</p>
   <a href="//github.com/jxnblk/skull" class="h6 button caps">
     Download
   </a>
 </header>
-
-<section id="stats" class="h6 bold caps center p2">
-  <div class="inline-block px2 py1"><%= filesize(stats.size) %></div>
-  <div class="inline-block px2 py1"><%= filesize(stats.gzipSize) %> gzipped</div>
-  <div class="inline-block px2 py1"><%= stats.rules.length %> rules</div>
-  <div class="inline-block px2 py1"><%= stats.aggregates.selectors %> selectors</div>
-  <div class="inline-block px2 py1"><%= stats.aggregates.declarations %> declarations</div>
-</section>
 
 <section id="features" class="container px2 py3">
   <div class="h3 center row">
@@ -28,6 +34,13 @@
       Powerful utilities to design in the browser faster
     </div>
   </div>
+</section>
+
+<section id="stats" class="h6 bold caps center p2">
+  <div class="inline-block px3 py1"><%= filesize(stats.gzipSize) %> gzipped</div>
+  <div class="inline-block px3 py1"><%= stats.rules.length %> rules</div>
+  <div class="inline-block px3 py1"><%= stats.aggregates.selectors %> selectors</div>
+  <div class="inline-block px3 py1"><%= stats.aggregates.declarations %> declarations</div>
 </section>
 
 <section id="grid" class="container px2 py4">
@@ -81,18 +94,15 @@
     </a>
   </p>
   <div class="row">
-    <div class="column-8">
-      <p>
-        Using appropriate measure and ample leading can drastically improve the readability of typography.
-      </p>
-    </div>
     <div class="column-4">
-      <h1>Heading 1</h1>
+      <h1 class="mt0">Heading 1</h1>
       <h2>Heading 2</h2>
       <h3>Heading 3</h3>
       <h4>Heading 4</h4>
       <h5>Heading 5</h5>
       <h6>Heading 6</h6>
+    </div>
+    <div class="column-8">
     </div>
   </div>
 </section>
@@ -167,6 +177,7 @@
   </div>
 </section>
 
+<!--
 <section id="forms-and-buttons" class="container px2 py4">
   <h1>Forms and Buttons</h1>
   <form>
@@ -179,6 +190,7 @@
 <section id="tables" class="container px2 py4">
   <h1>Tables</h1>
 </section>
+-->
 
 <section id="colors" class="container px2 py4">
   <h1>Colors</h1>
