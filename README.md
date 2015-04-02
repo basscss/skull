@@ -1,6 +1,6 @@
 # skull
 
-Minimal boilerplate built with [Basscss](http://basscss.com) and cssnext
+Minimal boilerplate and [Basscss](http://basscss.com) theme
 
 ## Getting Started
 
@@ -12,19 +12,7 @@ cd new-project
 rm -rf .git
 ```
 
-Install dev dependencies. (Requires Node and npm -- [Install Node](http://nodejs.org/download/))
-
-``` bash
-npm install
-```
-
-Start watching files for compilation and start development server.
-
-``` bash
-npm start
-```
-
-Use `index.html` as a starting point and edit the files in `src/` to customize the CSS.
+Use `index.html` as a starting point and edit `css/skull.css` to customize the CSS.
 
 ---
 
