@@ -36,9 +36,9 @@
 
   --h1: 2.25rem;
   --h2: 1.75rem;
-  --h3: 1.5rem;
-  --h4: 1rem;
-  --h5: .875rem;
+  --h3: 1.25rem;
+  --h4: 1.125rem;
+  --h5: 1rem;
   --h6: .75rem;
 
   --bold-font-weight: bold;
@@ -53,6 +53,8 @@
   --form-field-height: 2.25rem;
   --form-field-padding-y: .5rem;
   --form-field-padding-x: .5rem;
+
+  --blue: #0099dd;
 
   /*
   --space-1: .5rem;

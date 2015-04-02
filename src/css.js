@@ -6,12 +6,13 @@ var cssnext = require('cssnext');
 var autogrid = require('autogrid');
 
 var gridOpts = {
+  gutter: '16px',
   customProperties: false,
   customMedia: false,
   columnName: 'BB-column-NN-MM',
   mixedColumns: true,
   breakpoints: [
-    { value: '(min-width: 52em)' }
+    { value: '(min-width: 40em)' }
   ]
 };
 

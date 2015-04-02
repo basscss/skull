@@ -23,18 +23,22 @@
     "basscss-utility-white-space": "latest"
   },
   "devDependencies": {
-    "autogrid": "^1.0.4",
+    "autogrid": "^1.0.6",
     "clean-css": "^3.1.8",
+    "colors.css": "^2.3.0",
     "cssnext": "^1.1.0",
+    "cssstats": "^1.4.0",
+    "filesize": "^3.1.2",
     "http-server": "^0.8.0",
-    "lodash": "^3.6.0"
+    "lodash": "^3.6.0",
+    "watch": "^0.15.0"
   },
   "scripts": {
     "css": "node src/css",
     "minify:css": "cleancss css/skull.css -o css/skull.min.css",
     "docs": "node docs/build",
     "clean": "node docs/clean",
-    "dev": "npm run docs & npm run css && npm run minify:css & npm run serve",
+    "dev": "watch 'npm run docs && npm run css && npm run minify:css' ./docs & npm run serve",
     "serve": "http-server -p 8000",
     "start": "npm run serve"
   },

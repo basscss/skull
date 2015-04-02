@@ -85,8 +85,8 @@ textarea {
 
 button,
 .button {
-  font-size: 14px;
-  font-size: .875rem;
+  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
@@ -156,8 +156,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, dl, ol, ul {
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   margin-top: 0;
   margin-bottom: 16px;
   margin-bottom: 1rem;
@@ -200,16 +200,16 @@ blockquote {
 }
   blockquote,
   blockquote p {
-    font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 20px;
+    font-size: 1.25rem;
     font-style: italic;
   }
 
 h1, .h1 { font-size: 36px; font-size: 2.25rem }
 h2, .h2 { font-size: 28px; font-size: 1.75rem }
-h3, .h3 { font-size: 24px; font-size: 1.5rem }
-h4, .h4 { font-size: 16px; font-size: 1rem }
-h5, .h5 { font-size: 14px; font-size: .875rem }
+h3, .h3 { font-size: 20px; font-size: 1.25rem }
+h4, .h4 { font-size: 18px; font-size: 1.125rem }
+h5, .h5 { font-size: 16px; font-size: 1rem }
 h6, .h6 { font-size: 12px; font-size: .75rem }
 
 .list-reset {
@@ -338,8 +338,8 @@ body {
 }
 
 a {
-  color: #0074d9 ;
-  color: #0074d9;
+  color: #0099dd ;
+  color: #0099dd;
   text-decoration: none;
 }
 
@@ -362,8 +362,8 @@ hr {
 
 .button {
   color: white;
-  background-color: #0074d9 ;
-  background-color: #0074d9;
+  background-color: #0099dd ;
+  background-color: #0099dd;
   border-radius: 3px;
   -webkit-transition-duration: .05s;
           transition-duration: .05s;
@@ -448,7 +448,7 @@ hr {
 .white { color: #fff }
 
 .aqua  { color: #7fdbff }
-.blue  { color: #0074d9 }
+.blue  { color: #0099dd }
 .navy  { color: #001f3f }
 .teal  { color: #39cccc }
 .green { color: #2ecc40 }
@@ -471,7 +471,7 @@ hr {
 .bg-white  { background-color: #fff }
 
 .bg-aqua  { background-color: #7fdbff }
-.bg-blue  { background-color: #0074d9 }
+.bg-blue  { background-color: #0099dd }
 .bg-navy  { background-color: #001f3f }
 .bg-teal  { background-color: #39cccc }
 .bg-green { background-color: #2ecc40 }
@@ -494,7 +494,7 @@ hr {
 /* Border Color */
 
 .border-aqua  { border-color: #7fdbff }
-.border-blue  { border-color: #0074d9 }
+.border-blue  { border-color: #0099dd }
 .border-navy  { border-color: #001f3f }
 .border-teal  { border-color: #39cccc }
 .border-green { border-color: #2ecc40 }
@@ -545,7 +545,7 @@ hr {
 /*
 
   autogrid
-  v1.0.5
+  v1.0.6
 
 */
 
@@ -557,8 +557,8 @@ hr {
 
 }
 .row {
-  margin-left: -32px;
-  margin-right: -32px
+  margin-left: -16px;
+  margin-right: -16px
 
 }
 .row:before, .row:after {
@@ -572,19 +572,19 @@ hr {
 }
 .column-1, .column-2, .column-3, .column-4, .column-5, .column-6, .column-7, .column-8, .column-9, .column-10, .column-11, .column-12 {
   box-sizing: border-box;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
   min-height: 1px
 
 }
-@media (min-width: 52em) {
+@media (min-width: 40em) {
   .column-1, .column-2, .column-3, .column-4, .column-5, .column-6, .column-7, .column-8, .column-9, .column-10, .column-11, .column-12 {
     float: left
 
   }
 
 }
-@media (min-width: 52em) {
+@media (min-width: 40em) {
   .column-1 { width: 8.333333333333332% }
   .column-2 { width: 16.666666666666664% }
   .column-3 { width: 25% }
