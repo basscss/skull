@@ -31,7 +31,7 @@ data.related = [
   { name: 'Autotable', href: 'http://github.com/jxnblk/autotable' },
 ];
 
-data.download = '';
+data.download = 'https://github.com/jxnblk/skull/archive/' + data.version + '.zip';
 
 var tpl = _.template(fs.readFileSync(path.join(__dirname, './template.html'), 'utf8'));
 data.content = _.template(fs.readFileSync(path.join(__dirname, './docs.html'), 'utf8'))(data);
