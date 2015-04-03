@@ -12,17 +12,19 @@
       M21 17 A4 4 0 0 0 29 17 A4 4 0 0 0 21 17 
     "/>
   </svg>
-  <h1 class="m0">
-    Skull
-    <sup class="h6 caps">v<%= version %></sup>
-  </h1>
-  <p class="h3 mb3">Minimal boilerplate and Basscss theme</p>
+  <div class="mb1">
+    <h1 class="h2 inline-block m0">
+      Skull
+    </h1>
+    <p class="h2 inline-block m0"> — Bare bones boilerplate and Basscss theme</p>
+  </div>
+  <div class="h6 caps mb3">v<%= version %></div>
   <a href="//github.com/jxnblk/skull" class="h6 button caps">
     Download
   </a>
 </header>
 
-<section id="features" class="container px2 py3">
+<section id="features" class="container px2 py4">
   <div class="h3 center row">
     <div class="column-4 py2">
       Lightweight, minimal styles ready to be customized
@@ -36,7 +38,7 @@
   </div>
 </section>
 
-<section id="stats" class="h6 bold caps center p2">
+<section id="stats" class="h6 bold caps center container p2 border rounded">
   <div class="inline-block px3 py1"><%= filesize(stats.gzipSize) %> gzipped</div>
   <div class="inline-block px3 py1"><%= stats.rules.length %> rules</div>
   <div class="inline-block px3 py1"><%= stats.aggregates.selectors %> selectors</div>
@@ -177,20 +179,72 @@
   </div>
 </section>
 
-<!--
 <section id="forms-and-buttons" class="container px2 py4">
   <h1>Forms and Buttons</h1>
   <form>
-    <label>Hamburger</label>
-    <input type="text" />
-    <button>Pickle</button>
+    <div class="row">
+      <div class="column-6">
+        <label>Hamburger</label>
+        <input type="text" />
+        <label>Pickle</label>
+        <input type="text" />
+        <label>Bun</label>
+        <select>
+          <option value="Potato" label="Potato" />
+          <option value="Multigrain" label="Multigrain" />
+          <option value="Gluten Free" label="Gluten Free" />
+          <option value="Brioche" label="Brioche" />
+        </select>
+      </div>
+      <div class="column-6">
+        <fieldset>
+          <legend>Toppings</legend>
+          <label>
+            <input type="checkbox" /> Onions
+          </label>
+          <label>
+            <input type="checkbox" /> Lettuce
+          </label>
+          <label>
+            <input type="checkbox" /> Tomato
+          </label>
+          <label>
+            <input type="checkbox" /> Ketchup
+          </label>
+          <label>
+            <input type="checkbox" /> Mayo
+          </label>
+        </fieldset>
+        <label>Notes:</label>
+        <textarea></textarea>
+      </div>
+    </div>
+    <hr />
+    <button>Medium Rare</button>
   </form>
 </section>
 
 <section id="tables" class="container px2 py4">
   <h1>Tables</h1>
+  <table>
+    <thead>
+      <tr>
+        <% tableExample.thead.forEach(function(th) { %>
+          <th><%= th %></th>
+        <% }) %>
+      </tr>
+    </thead>
+    <tbody>
+      <% tableExample.tbody.forEach(function(tr) { %>
+        <tr>
+          <% tr.forEach(function(td) { %>
+            <td><%= td %></td>
+          <% }) %>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
 </section>
--->
 
 <section id="colors" class="container px2 py4">
   <h1>Colors</h1>
@@ -207,13 +261,13 @@
 </section>
 
 <footer class="container px2">
-  <div class="py3 border-top">
-    <a href="//jxnblk.com/skull">
+  <div class="py4 mxn2">
+    <a href="//jxnblk.com/skull" class="inline-block p2">
       Skull
       v<%= version %>
     </a>
-    <a href="//github.com/jxnblk/skull">Github</a>
-    <p class="h5 inline-block">
+    <a href="//github.com/jxnblk/skull" class="inline-block p2">Github</a>
+    <p class="h5 inline-block p2">
       Made by
       <a href="//jxnblk.com">Jxnblk</a>
     </p>
