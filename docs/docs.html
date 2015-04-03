@@ -3,7 +3,7 @@
   <svg viewBox="0 0 32 32"
     width="3em"
     height="3em"
-    class="inline-block mt4 mb4"
+    class="inline-block mt4 mb4 clickable js-skull"
     fill="currentColor">
     <path d="
       M0 6 H32 V24 L28 25 V28 H4 V25 L0 24z
@@ -71,41 +71,27 @@
   <h1>Grid</h1>
   <p>Simple, responsive grid that collapses at small viewport widths.</p>
   <div class="h6 center row mb2">
-    <div class="column-6"> <div class="p1 bg-silver rounded">6</div> </div>
-    <div class="column-6"> <div class="p1 bg-silver rounded">6</div> </div>
+    <div class="column-6"> <div class="p1 bg-darken-2 rounded">6</div> </div>
+    <div class="column-6"> <div class="p1 bg-darken-2 rounded">6</div> </div>
   </div>
   <div class="h6 center row mb2">
-    <div class="column-4"> <div class="p1 bg-silver rounded">4</div> </div>
-    <div class="column-4"> <div class="p1 bg-silver rounded">4</div> </div>
-    <div class="column-4"> <div class="p1 bg-silver rounded">4</div> </div>
+    <div class="column-4"> <div class="p1 bg-darken-2 rounded">4</div> </div>
+    <div class="column-4"> <div class="p1 bg-darken-2 rounded">4</div> </div>
+    <div class="column-4"> <div class="p1 bg-darken-2 rounded">4</div> </div>
   </div>
   <div class="h6 center row mb2">
-    <div class="column-3"> <div class="p1 bg-silver rounded">3</div> </div>
-    <div class="column-3"> <div class="p1 bg-silver rounded">3</div> </div>
-    <div class="column-3"> <div class="p1 bg-silver rounded">3</div> </div>
-    <div class="column-3"> <div class="p1 bg-silver rounded">3</div> </div>
+    <div class="column-3"> <div class="p1 bg-darken-2 rounded">3</div> </div>
+    <div class="column-3"> <div class="p1 bg-darken-2 rounded">3</div> </div>
+    <div class="column-3"> <div class="p1 bg-darken-2 rounded">3</div> </div>
+    <div class="column-3"> <div class="p1 bg-darken-2 rounded">3</div> </div>
   </div>
   <div class="h6 center row mb2">
-    <div class="column-2"> <div class="p1 bg-silver rounded">2</div> </div>
-    <div class="column-2"> <div class="p1 bg-silver rounded">2</div> </div>
-    <div class="column-2"> <div class="p1 bg-silver rounded">2</div> </div>
-    <div class="column-2"> <div class="p1 bg-silver rounded">2</div> </div>
-    <div class="column-2"> <div class="p1 bg-silver rounded">2</div> </div>
-    <div class="column-2"> <div class="p1 bg-silver rounded">2</div> </div>
-  </div>
-  <div class="h6 center row mb2">
-    <div class="column-1"> <div class="p1 bg-silver rounded">1</div> </div>
-    <div class="column-1"> <div class="p1 bg-silver rounded">1</div> </div>
-    <div class="column-1"> <div class="p1 bg-silver rounded">1</div> </div>
-    <div class="column-1"> <div class="p1 bg-silver rounded">1</div> </div>
-    <div class="column-1"> <div class="p1 bg-silver rounded">1</div> </div>
-    <div class="column-1"> <div class="p1 bg-silver rounded">1</div> </div>
-    <div class="column-1"> <div class="p1 bg-silver rounded">1</div> </div>
-    <div class="column-1"> <div class="p1 bg-silver rounded">1</div> </div>
-    <div class="column-1"> <div class="p1 bg-silver rounded">1</div> </div>
-    <div class="column-1"> <div class="p1 bg-silver rounded">1</div> </div>
-    <div class="column-1"> <div class="p1 bg-silver rounded">1</div> </div>
-    <div class="column-1"> <div class="p1 bg-silver rounded">1</div> </div>
+    <div class="column-2"> <div class="p1 bg-darken-2 rounded">2</div> </div>
+    <div class="column-2"> <div class="p1 bg-darken-2 rounded">2</div> </div>
+    <div class="column-2"> <div class="p1 bg-darken-2 rounded">2</div> </div>
+    <div class="column-2"> <div class="p1 bg-darken-2 rounded">2</div> </div>
+    <div class="column-2"> <div class="p1 bg-darken-2 rounded">2</div> </div>
+    <div class="column-2"> <div class="p1 bg-darken-2 rounded">2</div> </div>
   </div>
 </section>
 
@@ -343,6 +329,30 @@
   </div>
 </footer>
 
+
+<style>.clickable{cursor:pointer}</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+<script>
+  var hour = moment().hour();
+  var skull = document.querySelector('.js-skull');
+  var dark = false;
+  document.body.style.transition = 'background .2s ease-out';
+  function toggleTheme() {
+    if (dark) {
+      document.body.classList.add('white', 'bg-black');
+    } else {
+      document.body.classList.remove('white', 'bg-black');
+    }
+  }
+  if (hour > 20 || hour < 6) {
+    dark = true;
+    toggleTheme();
+  }
+  skull.addEventListener('click', function() {
+    dark = !dark;
+    toggleTheme();
+  });
+</script>
 
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-4603832-6', 'auto');ga('send', 'pageview');
