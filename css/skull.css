@@ -1,7 +1,7 @@
 /*
 
   Autoform
-  v1.0.0
+  v1.0.1
 
 */
 
@@ -43,6 +43,8 @@ fieldset {
   padding: 0;
   margin-top: 0;
   margin-bottom: 16px;
+  margin-left: 0;
+  margin-right: 0;
   border: 0;
 }
 legend {
