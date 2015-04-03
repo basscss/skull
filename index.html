@@ -20,7 +20,7 @@
   <svg viewBox="0 0 32 32"
     width="3em"
     height="3em"
-    class="inline-block"
+    class="inline-block mt4 mb4"
     fill="currentColor">
     <path d="
       M0 6 H32 V24 L28 25 V28 H4 V25 L0 24z
@@ -29,17 +29,20 @@
       M21 17 A4 4 0 0 0 29 17 A4 4 0 0 0 21 17 
     "/>
   </svg>
-  <h1 class="m0">
-    Skull
-    <sup class="h6 caps">v1.0.0</sup>
-  </h1>
-  <p class="h3 mb3">Minimal boilerplate and Basscss theme</p>
-  <a href="//github.com/jxnblk/skull" class="h6 button caps">
+  <div class="mb1">
+    <h1 class="h2 inline-block m0">
+      Skull:
+    </h1>
+    <p class="h2 inline-block m0">Bare bones boilerplate and Basscss theme</p>
+  </div>
+  <div class="h6 bold caps mb3">v1.0.0</div>
+  <a href="" class="h6 caps button mr2">
     Download
   </a>
+  <a href="" class="h6 caps button">Tweet</a>
 </header>
 
-<section id="features" class="container px2 py3">
+<section id="features" class="container px2 py4">
   <div class="h3 center row">
     <div class="column-4 py2">
       Lightweight, minimal styles ready to be customized
@@ -53,11 +56,25 @@
   </div>
 </section>
 
-<section id="stats" class="h6 bold caps center p2">
-  <div class="inline-block px3 py1">2.38 kB gzipped</div>
-  <div class="inline-block px3 py1">195 rules</div>
-  <div class="inline-block px3 py1">291 selectors</div>
-  <div class="inline-block px3 py1">287 declarations</div>
+<section id="stats" class="h6 bold caps center container px2">
+  <div class="p2 border rounded">
+    <div class="inline-block px2 py1">
+      <div class="h3">2.52 kB</div>
+      gzipped
+    </div>
+    <div class="inline-block px2 py1">
+      <div class="h3">207</div>
+      rules
+    </div>
+    <div class="inline-block px2 py1">
+      <div class="h3">320</div>
+      selectors
+    </div>
+    <div class="inline-block px2 py1">
+      <div class="h3">305</div>
+      declarations
+    </div>
+  </div>
 </section>
 
 <section id="grid" class="container px2 py4">
@@ -105,10 +122,9 @@
 <section id="typography" class="container px2 py4">
   <h1>Typography</h1>
   <p>
-    Considered, readable typography featuring
-    <a href="https://www.google.com/fonts/specimen/Lato">
-      Lato from Google Fonts
-    </a>
+    Carefully considered, readable typography featuring
+    <a href="https://www.google.com/fonts/specimen/Lato">Lato</a>
+    from Google Fonts
   </p>
   <div class="row">
     <div class="column-4">
@@ -120,6 +136,16 @@
       <h6>Heading 6</h6>
     </div>
     <div class="column-8">
+      <p class="h3">
+        Body copy set at 1.125rem (18px) with a 1.5 line-height and a high contrast type scale,
+        Skull’s typography sets the pace for elegant information hierarchy 
+        and lends itself to effortless readability.
+      </p>
+      <p>
+        In combination with typography utilities, sites built with Skull
+        are quick to tweak and customize to fit any design,
+        whether it’s a blog, documentation, a personal portfolio, or a cat gif portal.
+      </p>
     </div>
   </div>
 </section>
@@ -127,10 +153,8 @@
 <section id="utilities" class="container px2 py4">
   <h1>Utilities</h1>
   <p>
-    Quickly adjust layouts and iterate on
-    designs with powerful utilities that
-    let you spend less time futzing around with CSS
-    and more time designing in the browser.
+    Quickly adjust layouts and iterate on designs with powerful utilities that
+    let you spend less time futzing around with CSS and more time designing in the browser.
   </p>
   <div class="center row">
     <div class="column-3">.clearfix</div>
@@ -194,20 +218,165 @@
   </div>
 </section>
 
-<!--
 <section id="forms-and-buttons" class="container px2 py4">
   <h1>Forms and Buttons</h1>
+  <p>
+    Clean, straightforward forms for <i>don’t-make-me-think</i> style simplicity.
+  </p>
   <form>
-    <label>Hamburger</label>
-    <input type="text" />
-    <button>Pickle</button>
+    <div class="row">
+      <div class="column-6">
+        <label>Hamburger</label>
+        <input type="text" />
+        <label>Pickle</label>
+        <input type="text" />
+        <label>Bun</label>
+        <select>
+          <option value="Potato" label="Potato" />
+          <option value="Multigrain" label="Multigrain" />
+          <option value="Gluten Free" label="Gluten Free" />
+          <option value="Brioche" label="Brioche" />
+        </select>
+      </div>
+      <div class="column-6">
+        <fieldset>
+          <legend>Toppings</legend>
+          <div class="row">
+            <div class="column-6">
+              <label>
+                <input type="checkbox" /> Onions
+              </label>
+              <label>
+                <input type="checkbox" /> Lettuce
+              </label>
+              <label>
+                <input type="checkbox" /> Tomato
+              </label>
+            </div>
+            <div class="column-6">
+              <label>
+                <input type="checkbox" /> Ketchup
+              </label>
+              <label>
+                <input type="checkbox" /> Mayo
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <label>Notes:</label>
+        <textarea></textarea>
+      </div>
+    </div>
+    <hr />
+    <button class="button">Medium Rare</button>
   </form>
 </section>
 
 <section id="tables" class="container px2 py4">
   <h1>Tables</h1>
+  <table>
+    <thead>
+      <tr>
+        
+          <th>Name</th>
+        
+          <th>Handle</th>
+        
+          <th>Github</th>
+        
+          <th>Website</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          
+            <td>
+              
+                Brent Jackson
+              
+            </td>
+          
+            <td>
+              
+                @jxnblk
+              
+            </td>
+          
+            <td>
+              
+                <a href="http://github.com/jxnblk">http://github.com/jxnblk</a>
+              
+            </td>
+          
+            <td>
+              
+                <a href="http://jxnblk.com">http://jxnblk.com</a>
+              
+            </td>
+          
+        </tr>
+      
+        <tr>
+          
+            <td>
+              
+                Adam Morse
+              
+            </td>
+          
+            <td>
+              
+                @mrmrs_
+              
+            </td>
+          
+            <td>
+              
+                <a href="http://github.com/mrmrs">http://github.com/mrmrs</a>
+              
+            </td>
+          
+            <td>
+              
+                <a href="http://mrmrs.cc">http://mrmrs.cc</a>
+              
+            </td>
+          
+        </tr>
+      
+        <tr>
+          
+            <td>
+              
+                John Otander
+              
+            </td>
+          
+            <td>
+              
+                @4lpine
+              
+            </td>
+          
+            <td>
+              
+                <a href="http://github.com/johnotander">http://github.com/johnotander</a>
+              
+            </td>
+          
+            <td>
+              
+                <a href="http://johnotander.com">http://johnotander.com</a>
+              
+            </td>
+          
+        </tr>
+      
+    </tbody>
+  </table>
 </section>
--->
 
 <section id="colors" class="container px2 py4">
   <h1>Colors</h1>
@@ -283,14 +452,60 @@
   </div>
 </section>
 
+<section id="cta" class="center container px2 py4">
+  <h1>Get Started</h1>
+  <a href="" class="h6 caps button">Download</a>
+</section>
+
+<section id="related" class="container px2 py4">
+  <div class="center p3 border rounded">
+    <p class="bold">Skull is built with these tools:</p>
+    <div class="row">
+      
+        <div class="column-3">
+          <a href="http://basscss.com"
+            class="h4 bold">
+
+            Basscss
+          </a>
+        </div>
+      
+        <div class="column-3">
+          <a href="http://github.com/jxnblk/autogrid"
+            class="h4 bold">
+
+            Autogrid
+          </a>
+        </div>
+      
+        <div class="column-3">
+          <a href="http://github.com/jxnblk/autoform"
+            class="h4 bold">
+
+            Autoform
+          </a>
+        </div>
+      
+        <div class="column-3">
+          <a href="http://github.com/jxnblk/autotable"
+            class="h4 bold">
+
+            Autotable
+          </a>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
 <footer class="container px2">
-  <div class="py3 border-top">
-    <a href="//jxnblk.com/skull">
+  <div class="center py4 mxn2">
+    <a href="//jxnblk.com/skull" class="inline-block p2">
       Skull
       v1.0.0
     </a>
-    <a href="//github.com/jxnblk/skull">Github</a>
-    <p class="h5 inline-block">
+    <a href="//github.com/jxnblk/skull" class="inline-block p2">Github</a>
+    <p class="h5 inline-block p2">
       Made by
       <a href="//jxnblk.com">Jxnblk</a>
     </p>
