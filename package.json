@@ -23,7 +23,9 @@
     "basscss-utility-white-space": "latest"
   },
   "devDependencies": {
+    "autoform": "^1.0.0",
     "autogrid": "^1.0.6",
+    "autotable": "^1.0.0",
     "clean-css": "^3.1.8",
     "colors.css": "^2.3.0",
     "cssnext": "^1.1.0",

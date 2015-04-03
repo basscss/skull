@@ -8,9 +8,9 @@
 
 /* Basscss Modules */
 @import 'basscss-base-reset';
-@import 'basscss-base-forms';
+/* @import 'basscss-base-forms'; */
 @import 'basscss-base-buttons';
-@import 'basscss-base-tables';
+/* @import 'basscss-base-tables'; */
 @import 'basscss-base-typography';
 
 @import 'basscss-utility-layout';
@@ -45,7 +45,7 @@
 
   --button-font-size: var(--h5);
   --button-font-weight: bold;
-  --button-line-height: 1.125rem;
+  --button-line-height: 1.375rem;
   --button-padding-y: .5rem;
   --button-padding-x: 1rem;
 
@@ -55,6 +55,7 @@
   --form-field-padding-x: .5rem;
 
   --blue: #0099dd;
+  --border-color: var(--gray);
 
   /*
   --space-1: .5rem;
