@@ -3,7 +3,7 @@
   <svg viewBox="0 0 32 32"
     width="3em"
     height="3em"
-    class="inline-block"
+    class="inline-block mt4 mb4"
     fill="currentColor">
     <path d="
       M0 6 H32 V24 L28 25 V28 H4 V25 L0 24z
@@ -14,14 +14,15 @@
   </svg>
   <div class="mb1">
     <h1 class="h2 inline-block m0">
-      Skull
+      Skull:
     </h1>
-    <p class="h2 inline-block m0"> — Bare bones boilerplate and Basscss theme</p>
+    <p class="h2 inline-block m0">Bare bones boilerplate and Basscss theme</p>
   </div>
-  <div class="h6 caps mb3">v<%= version %></div>
-  <a href="//github.com/jxnblk/skull" class="h6 button caps">
+  <div class="h6 bold caps mb3">v<%= version %></div>
+  <a href="<%= download %>" class="h6 caps button mr2">
     Download
   </a>
+  <a href="" class="h6 caps button">Tweet</a>
 </header>
 
 <section id="features" class="container px2 py4">
@@ -38,11 +39,25 @@
   </div>
 </section>
 
-<section id="stats" class="h6 bold caps center container p2 border rounded">
-  <div class="inline-block px3 py1"><%= filesize(stats.gzipSize) %> gzipped</div>
-  <div class="inline-block px3 py1"><%= stats.rules.length %> rules</div>
-  <div class="inline-block px3 py1"><%= stats.aggregates.selectors %> selectors</div>
-  <div class="inline-block px3 py1"><%= stats.aggregates.declarations %> declarations</div>
+<section id="stats" class="h6 bold caps center container px2">
+  <div class="p2 border rounded">
+    <div class="inline-block px2 py1">
+      <div class="h3"><%= filesize(stats.gzipSize) %></div>
+      gzipped
+    </div>
+    <div class="inline-block px2 py1">
+      <div class="h3"><%= stats.rules.length %></div>
+      rules
+    </div>
+    <div class="inline-block px2 py1">
+      <div class="h3"><%= stats.aggregates.selectors %></div>
+      selectors
+    </div>
+    <div class="inline-block px2 py1">
+      <div class="h3"><%= stats.aggregates.declarations %></div>
+      declarations
+    </div>
+  </div>
 </section>
 
 <section id="grid" class="container px2 py4">
@@ -90,10 +105,9 @@
 <section id="typography" class="container px2 py4">
   <h1>Typography</h1>
   <p>
-    Considered, readable typography featuring
-    <a href="https://www.google.com/fonts/specimen/Lato">
-      Lato from Google Fonts
-    </a>
+    Carefully considered, readable typography featuring
+    <a href="https://www.google.com/fonts/specimen/Lato">Lato</a>
+    from Google Fonts
   </p>
   <div class="row">
     <div class="column-4">
@@ -105,6 +119,16 @@
       <h6>Heading 6</h6>
     </div>
     <div class="column-8">
+      <p class="h3">
+        Body copy set at 1.125rem (18px) with a 1.5 line-height and a high contrast type scale,
+        Skull’s typography sets the pace for elegant information hierarchy 
+        and lends itself to effortless readability.
+      </p>
+      <p>
+        In combination with typography utilities, sites built with Skull
+        are quick to tweak and customize to fit any design,
+        whether it’s a blog, documentation, a personal portfolio, or a cat gif portal.
+      </p>
     </div>
   </div>
 </section>
@@ -112,10 +136,8 @@
 <section id="utilities" class="container px2 py4">
   <h1>Utilities</h1>
   <p>
-    Quickly adjust layouts and iterate on
-    designs with powerful utilities that
-    let you spend less time futzing around with CSS
-    and more time designing in the browser.
+    Quickly adjust layouts and iterate on designs with powerful utilities that
+    let you spend less time futzing around with CSS and more time designing in the browser.
   </p>
   <div class="center row">
     <div class="column-3">.clearfix</div>
@@ -181,6 +203,9 @@
 
 <section id="forms-and-buttons" class="container px2 py4">
   <h1>Forms and Buttons</h1>
+  <p>
+    Clean, straightforward forms for <i>don’t-make-me-think</i> style simplicity.
+  </p>
   <form>
     <div class="row">
       <div class="column-6">
@@ -199,28 +224,34 @@
       <div class="column-6">
         <fieldset>
           <legend>Toppings</legend>
-          <label>
-            <input type="checkbox" /> Onions
-          </label>
-          <label>
-            <input type="checkbox" /> Lettuce
-          </label>
-          <label>
-            <input type="checkbox" /> Tomato
-          </label>
-          <label>
-            <input type="checkbox" /> Ketchup
-          </label>
-          <label>
-            <input type="checkbox" /> Mayo
-          </label>
+          <div class="row">
+            <div class="column-6">
+              <label>
+                <input type="checkbox" /> Onions
+              </label>
+              <label>
+                <input type="checkbox" /> Lettuce
+              </label>
+              <label>
+                <input type="checkbox" /> Tomato
+              </label>
+            </div>
+            <div class="column-6">
+              <label>
+                <input type="checkbox" /> Ketchup
+              </label>
+              <label>
+                <input type="checkbox" /> Mayo
+              </label>
+            </div>
+          </div>
         </fieldset>
         <label>Notes:</label>
         <textarea></textarea>
       </div>
     </div>
     <hr />
-    <button>Medium Rare</button>
+    <button class="button">Medium Rare</button>
   </form>
 </section>
 
@@ -238,7 +269,13 @@
       <% tableExample.tbody.forEach(function(tr) { %>
         <tr>
           <% tr.forEach(function(td) { %>
-            <td><%= td %></td>
+            <td>
+              <% if (td.match(/^http/)) { %>
+                <a href="<%= td %>"><%= td %></a>
+              <% } else { %>
+                <%= td %>
+              <% } %>
+            </td>
           <% }) %>
         </tr>
       <% }) %>
@@ -260,8 +297,30 @@
   </div>
 </section>
 
+<section id="cta" class="center container px2 py4">
+  <h1>Get Started</h1>
+  <a href="<%= download %>" class="h6 caps button">Download</a>
+</section>
+
+<section id="related" class="container px2 py4">
+  <div class="center p3 border rounded">
+    <p class="bold">Skull is built with these tools:</p>
+    <div class="row">
+      <% related.map(function(item) { %>
+        <div class="column-3">
+          <a href="<%= item.href %>"
+            class="h4 bold">
+
+            <%= item.name %>
+          </a>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
 <footer class="container px2">
-  <div class="py4 mxn2">
+  <div class="center py4 mxn2">
     <a href="//jxnblk.com/skull" class="inline-block p2">
       Skull
       v<%= version %>

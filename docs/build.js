@@ -22,7 +22,16 @@ data.tableExample = {
     [ 'Adam Morse', '@mrmrs_', 'http://github.com/mrmrs', 'http://mrmrs.cc' ],
     [ 'John Otander', '@4lpine', 'http://github.com/johnotander', 'http://johnotander.com' ],
   ]
-}
+};
+
+data.related = [
+  { name: 'Basscss', href: 'http://basscss.com' },
+  { name: 'Autogrid', href: 'http://github.com/jxnblk/autogrid' },
+  { name: 'Autoform', href: 'http://github.com/jxnblk/autoform' },
+  { name: 'Autotable', href: 'http://github.com/jxnblk/autotable' },
+];
+
+data.download = '';
 
 var tpl = _.template(fs.readFileSync(path.join(__dirname, './template.html'), 'utf8'));
 data.content = _.template(fs.readFileSync(path.join(__dirname, './docs.html'), 'utf8'))(data);

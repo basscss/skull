@@ -6,15 +6,19 @@ var cssnext = require('cssnext');
 var autoform = require('autoform');
 var autotable = require('autotable');
 var autogrid = require('autogrid');
+var colors = require('colors.css');
 
 
 var styles = [];
 
 styles.push(autoform({
+  borderColor: colors.gray,
 }));
 
 styles.push(autotable({
+  headerFontSize: '14px',
   paddingY: '8px',
+  borderColor: colors.gray,
 }));
 
 styles.push(autogrid({
