@@ -19,12 +19,8 @@
     <p class="h2 inline-block m0">Bare bones boilerplate and Basscss theme</p>
   </div>
   <div class="h6 bold caps mb3">v<%= version %></div>
-  <a href="<%= download %>" class="h6 caps button mr2">
+  <a href="<%= download %>" class="h6 caps button ml1 mr1">
     Download
-  </a>
-  <a href="https://twitter.com/intent/tweet?text=Skull:%20Bare%20bones%20boilerplate%20and%20Basscss%20theme&url=http://jxnblk.com/skull&via=jxnblk"
-    class="h6 caps button">
-    Tweet
   </a>
 </header>
 
@@ -62,6 +58,14 @@
     </div>
   </div>
 </section>
+
+<div class="center px2 py3 mt3">
+  <a href="<%= homepage %>" class="h6 caps button ml1 mr1">Github</a>
+  <a href="https://twitter.com/intent/tweet?text=Skull:%20Bare%20bones%20boilerplate%20and%20Basscss%20theme&url=http://jxnblk.com/skull&via=jxnblk"
+    class="h6 caps button ml1 mr1">
+    Tweet
+  </a>
+</div>
 
 <section id="grid" class="container px2 py4">
   <h1>Grid</h1>
@@ -129,7 +133,7 @@
       </p>
       <p>
         In combination with typography utilities, sites built with Skull
-        are quick to tweak and customize to fit any design,
+        are quick to tweak and customize to fit any design –
         whether it’s a blog, documentation, a personal portfolio, or a cat gif portal.
       </p>
     </div>
@@ -142,7 +146,7 @@
     Quickly adjust layouts and iterate on designs with powerful utilities that
     let you spend less time futzing around with CSS and more time designing in the browser.
   </p>
-  <div class="center row">
+  <div class="bold center row">
     <div class="column-3">.clearfix</div>
     <div class="column-3">.left</div>
     <div class="column-3">.right</div>
@@ -260,30 +264,32 @@
 
 <section id="tables" class="container px2 py4">
   <h1>Tables</h1>
-  <table>
-    <thead>
-      <tr>
-        <% tableExample.thead.forEach(function(th) { %>
-          <th><%= th %></th>
-        <% }) %>
-      </tr>
-    </thead>
-    <tbody>
-      <% tableExample.tbody.forEach(function(tr) { %>
+  <div class="overflow-auto">
+    <table>
+      <thead>
         <tr>
-          <% tr.forEach(function(td) { %>
-            <td>
-              <% if (td.match(/^http/)) { %>
-                <a href="<%= td %>"><%= td %></a>
-              <% } else { %>
-                <%= td %>
-              <% } %>
-            </td>
+          <% tableExample.thead.forEach(function(th) { %>
+            <th><%= th %></th>
           <% }) %>
         </tr>
-      <% }) %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% tableExample.tbody.forEach(function(tr) { %>
+          <tr>
+            <% tr.forEach(function(td) { %>
+              <td>
+                <% if (td.match(/^http/)) { %>
+                  <a href="<%= td %>"><%= td %></a>
+                <% } else { %>
+                  <%= td %>
+                <% } %>
+              </td>
+            <% }) %>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <section id="colors" class="container px2 py4">
@@ -305,9 +311,9 @@
   <a href="<%= download %>" class="h6 caps button">Download</a>
 </section>
 
-<section id="related" class="container px2 py4">
-  <div class="center p3 border rounded">
-    <p class="bold">Skull is built with these tools:</p>
+<section id="related" class="center container px2 py4">
+  <div class="p3 mb2 border rounded">
+    <p class="bold">Built with:</p>
     <div class="row">
       <% related.map(function(item) { %>
         <div class="column-3">
@@ -320,6 +326,7 @@
       <% }) %>
     </div>
   </div>
+  <p class="h5 m0">Inspired by <a href="http://getskeleton.com/">Skeleton</a>.</p>
 </section>
 
 <footer class="container px2">
