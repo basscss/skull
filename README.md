@@ -7,7 +7,7 @@ Minimal boilerplate and [Basscss](http://basscss.com) theme
 To start fresh, clone skull into a new project and remove its git directory.
 
 ``` bash
-git clone https://github.com/jxnblk/bassplate.git new-project
+git clone https://github.com/basscss/skull.git new-project
 cd new-project
 rm -rf .git
 ```
