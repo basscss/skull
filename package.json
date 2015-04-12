@@ -46,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jxnblk/skull.git"
+    "url": "https://github.com/basscss/skull.git"
   },
   "keywords": [
     "CSS",
@@ -56,7 +56,7 @@
     "boilerplate"
   ],
   "bugs": {
-    "url": "https://github.com/jxnblk/skull/issues"
+    "url": "https://github.com/basscss/skull/issues"
   },
-  "homepage": "https://github.com/jxnblk/skull"
+  "homepage": "https://github.com/basscss/skull"
 }

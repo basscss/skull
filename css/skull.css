@@ -233,6 +233,30 @@ button:before,
 }
 
 .button:hover { text-decoration: none }
+
+/* Basscss Defaults */
+
+/*
+
+   COLOR VARIABLES
+
+   - Cool
+   - Warm
+   - Gray Scale
+
+*/
+
+:root {
+
+  /* Cool */
+
+
+  /* Warm */
+
+
+  /* Gray scale */
+
+}
 /* @import 'basscss-base-tables'; */
 /* Basscss Base Typography */
 
@@ -256,11 +280,6 @@ p, dl, ol, ul {
   margin-top: 0;
   margin-bottom: 16px;
   margin-bottom: 1rem;
-}
-
-ol, ul {
-  padding-left: 32px;
-  padding-left: 2rem;
 }
 
 pre, code, samp {
@@ -338,7 +357,7 @@ h6, .h6 { font-size: 12px; font-size: .75rem }
 .full-width { width: 100% }
 /* Basscss Utility Typography */
 
-.bold    { font-weight: bold }
+.bold    { font-weight: bold; font-weight: bold }
 .regular { font-weight: normal }
 .italic  { font-style: italic }
 .caps    { text-transform: uppercase; letter-spacing: .2em; }
@@ -405,45 +424,21 @@ h6, .h6 { font-size: 12px; font-size: .75rem }
 
 /* Basscss Color Base */
 
-/*
-
-   COLOR VARIABLES
-
-   - Cool
-   - Warm
-   - Gray Scale
-
-*/
-
-:root {
-
-  /* Cool */
-
-
-  /* Warm */
-
-
-  /* Gray scale */
-
-}
-
 body {
   color: #222;
   background-color: white;
 }
 
 a {
-  color: #0099dd ;
   color: #0099dd;
   text-decoration: none;
 }
 
-  a:hover {
-    text-decoration: underline;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
 pre, code {
-  background-color: #ddd ;
   background-color: #ddd;
   border-radius: 3px;
 }
@@ -457,7 +452,6 @@ hr {
 
 .button {
   color: white;
-  background-color: #0099dd ;
   background-color: #0099dd;
   border-radius: 3px;
   -webkit-transition-duration: .05s;
@@ -475,7 +469,7 @@ hr {
 .button:focus {
   outline: none;
   border-color: rgba(0,0,0,.125);
-  box-shadow: 0 0 2px 1px rgba(0,0,0,.25);
+  box-shadow: 0 0 0 3px rgba(0,0,0,.25);
 }
 
 .button:active,
